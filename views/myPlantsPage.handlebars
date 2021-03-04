@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/myPlantsStyle.css">
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div class="header">
+      <img id='left-leaf' src="images/small-leaf.svg">
+      <p>MY PLANTS</p>
+      <img id='right-leaf' src="images/small-leaf.svg">
+    </div>
+
+
+    <div class="back-button">
+      <a id='back-button' href='/index'>
+      <img src='images/back-button.svg'>
+    </a>
+    </div>
+
+
+    {{#Plants}}
+        <div class="a-plant">
+
+            <a href="/plant/{{nickname}}" class="fill-div">
+
+              <div id="plantIMG">
+                <img src="/images/{{nickname}}.svg"/>
+              </div>
+
+              <div id="plantINFO">
+                <h2>{{nickname}}</h2>
+                <p>Species: {{species}}</p>
+                <p>Age: {{age}} {{autoAge}} days old</p>
+                <h5>** can't insert autoAge, something wrong w/ the render in js **</h5>
+                <p>Watering: {{watering}}</p>
+              </div>
+
+            </a>
+
+        </div>
+    {{/Plants}}
+
+
+<div class='navigation'>
+
+  <img id='bottom-rectangle' src="images/bottom-rectangle.svg">
+
+  <a id='home-button' href='/index'>
+      <img src="images/home-button.svg">
+  </a>
+
+  <a href="/calendar">
+    <img id='calendar-button' src="images/calendar-button.svg">
+  </a>
+
+</div>
+
+
+  </div>
+
+
+
+<script type="app.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

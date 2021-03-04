@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <style>textarea{resize:none;}</style>
+
+  <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script src='/js/bootstrap.js'></script>
+
+  <link rel="stylesheet" href="/css/plantStyle.css">
+  
+</head>
+<body>
+
+<!-- 
+  CAN'T ADD PHOTOS
+-->
+  <div class="container">
+    <div class="header">
+      <img id='left-leaf' src="/images/small-leaf.svg">
+      <p> MY PLANTS </p>
+      <img id='right-leaf' src="/images/small-leaf.svg">
+    </div>
+
+    <div id="prevPage">
+      <a href='/myPlantsPage'>
+      <img src='/images/back-button.svg'>
+      </a>
+    </div>
+
+    <div id="plantID">
+      <img id='journalPhoto' src="/images/{{pic}}">
+      <h2>{{nickname}}</h2>
+      <h4>{{species}}</h4>
+      <h4>{{age}} days old</h4>
+    </div>
+
+    <div class="input">
+      <form id="addEntryForm" role="form" method="get" action="/plant/{{nickname}}/add">
+      <h3>Add Journal Entry</h3>
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
+        </div>
+
+          <div class="form-group">
+            <label for="img">Add photo</label>
+            <input type="file" id="img" name="img" accept=".svg">
+            <div class="hover">! = Please go to Calendar to add more than one photo for an entry.</div>
+          </div>
+
+          <!--<div class="form-group">
+            <h3>Caption</h3>
+            <input type="text" class="form-control" id="caption" name="caption">
+          </div>-->
+
+        <div class="form-group">
+          <p>How is your plant?</p>
+          <label>
+            <input type="radio" name="buttonGroup" value="bad" id="bad" checked="checked">
+            <img src="/images/bad-face.svg">
+          </label>
+
+          <label>
+            <input type="radio" name="buttonGroup" value="okay" id="okay">
+            <img src="/images/normal-face.svg">
+          </label>
+
+          <label>
+            <input type="radio" name="buttonGroup" value="good" id="good">
+            <img src="/images/good-face.svg">
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Notes:</label>
+          <input type="text" class="form-control" id="description" name="description">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add entry"></input>
+      </form>
+    </div>
+
+    <div class="input">
+      <form id="addEntryForm" role="form" method="get" action="/placeholder">
+      <h3>Plant Info</h3>
+        <div class="form-group">
+          <label for="start-date">Start Date:</label>
+          <input type="date" class="form-control" id="start-date" name="start-date" max="2021-04-01">
+        </div>
+
+        <h4>Watering Reminder</h4>
+        <div class="form-group">
+          <label for="remind-time">Time of Day:</label>
+          <input type="time" class="form-control" id="remind-time" name="remind-time">
+        </div>
+
+        <h4>How often:</h4>
+        <div class="form-group">
+          <label for="Every day">Every day</label>
+          <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every day">
+
+          <label for="Every other day">Every other day</label>
+          <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every other day">
+
+          <label for="Every week">Every week</label>
+          <input type="radio" class="remind-per" id="Every week" name="remind-per" value="Every week">
+
+          <h5>leaving nickname, species, and photo unchangable rn</h5>
+        </div>
+
+        
+        <input type="submit" id="submitBtn2" class="btn btn-default" value="Save Changes"></input>
+      </form>
+    </div>
+
+    <div class="bottom">
+      <img id='remove' src="/images/remove.svg">
+      <p>! since url changes after adding, handlebars doesn't work</p>
+      <p>dates limited to today and prev, but maybe only today?</p>
+      <p>hard coded to add to Froggy; adding doesn't work</p>
+      <p>atm, only way photo can be added is during plant creation</p>
+    </div>
+
+  {{#each Froggy}}
+    <div class="entry container">
+      <p>{{date}}</p>
+      <p>{{text}}</p>
+      <p>{{status}}</p>
+    </div>
+    <hr>
+  {{/each}}
+
+
+  
+
+    <div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href="/index">
+              <img src="/images/home-button.svg">
+          </a>
+        </div>
+
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="/images/calendar-button.svg">
+          </a>
+        </div>
+    </div>
+
+  </div>
+
+
+<script src='/js/myPlants.js'></script>
+<script type="app.js"></script>
+</body>
+</html>
