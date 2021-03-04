@@ -38,7 +38,7 @@
 
     <div class="input">
       <form id="addEntryForm" role="form" method="get" action="/plant/{{nickname}}/add">
-      <h3>Add Journal Entry</h3>
+      <h3>Quick Journal</h3>
         <div class="form-group">
           <label for="date">Date:</label>
           <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
@@ -58,7 +58,7 @@
         <div class="form-group">
           <p>How is your plant?</p>
           <label>
-            <input type="radio" name="buttonGroup" onclick="getMood();" value="bad" id="bad" checked="checked">
+            <input type="radio" name="buttonGroup" onclick="getMood();" value="bad" id="bad">
             <img src="/images/bad-face.svg">
           </label>
 

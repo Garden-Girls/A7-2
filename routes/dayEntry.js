@@ -65,9 +65,11 @@ exports.addEntry = function(req, res) { 
 	if (exists) {
 		data[viewPlant][ind].text = req.query.description;
 		data[viewPlant][ind].status = req.query.buttonGroup;
+		/*
 		if (req.query.img != null) {
 			data[viewPlant][ind].slides.push(req.query.img);
 		}
+		*/
 	}
 	else { //create new entry to be added
 		newEntry = {
@@ -83,11 +85,18 @@ exports.addEntry = function(req, res) { 
 	var forText = "";
 	var forMood = "";
 
-	if (ind != -1) {
+	//if (ind != -1) {
+	//after adding, get ind to render
+	for (var i = 0; i < data[viewPlant].length; i++) {
+		if (data[viewPlant][i].date == date) {
+			exists = true;
+			ind = i;
+		}
+	}
 		forSlides = data[viewPlant][ind].slides;
 		forText = data[viewPlant][ind].text;
 		forMood = data[viewPlant][ind].status;
-	}
+	//}
 
 	res.render('dayEntry', {
 		"plant": viewPlant,
