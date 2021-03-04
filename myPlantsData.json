@@ -4,7 +4,7 @@
 			"pic": "stripes.svg",
 			"nickname": "Stripes",
 			"species": "Philodendron",
-			"watering": "7:00 AM every day",
+			"watering": "07:00 AM every day",
 			"start": "01/01/2021"
 		},
 		{	
@@ -18,14 +18,14 @@
 			"pic": "emily.svg",
 			"nickname": "Emily",
 			"species": "Begonia",
-			"watering": "5:00 PM every week",
+			"watering": "05:00 PM every week",
 			"start": "01/03/2021"
 		},
 		{	
 			"pic": "bert.svg",
 			"nickname": "Bert",
 			"species": "Peperomia",
-			"watering": "1:00 PM every week",
+			"watering": "01:00 PM every week",
 			"start": "01/04/2021"
 		}
 	]

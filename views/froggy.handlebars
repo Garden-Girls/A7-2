@@ -86,13 +86,13 @@
       <h3>Plant Info</h3>
         <div class="form-group">
           <label for="start-date">Start Date:</label>
-          <input type="date" class="form-control" id="start-date" name="start-date" max="2021-04-01">
+          <input type="date" class="form-control" id="start-date" name="start-date" max="2021-04-01" value="{{start}}">
         </div>
 
         <h4>Watering Reminder</h4>
         <div class="form-group">
           <label for="remind-time">Time of Day:</label>
-          <input type="time" class="form-control" id="remind-time" name="remind-time">
+          <input type="time" class="form-control" id="remind-time" name="remind-time" value={{time}}>
         </div>
 
         <h4>How often:</h4>
@@ -122,17 +122,7 @@
       <p>atm, only way photo can be added is during plant creation</p>
     </div>
 
-  {{#each Froggy}}
-    <div class="entry container">
-      <p>{{date}}</p>
-      <p>{{text}}</p>
-      <p>{{status}}</p>
-    </div>
-    <hr>
-  {{/each}}
-
-
-  
+    <div class="hide" id="radioVal">{{period}}</div>
 
     <div class="footer">
         <div class="footer-item">

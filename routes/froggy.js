@@ -5,6 +5,7 @@ exports.view = function(req, res){
 	var ind = -1;
 	var accessPic = "edit-photo-button.svg"; 
 	var accessSpecies = "placeholder species";
+	var watering = "";
 	//this may be unneccesary if default image is added when updating json
 
 	for (var i = 0; i < myPlantsData["Plants"].length; i++) {
@@ -18,6 +19,7 @@ exports.view = function(req, res){
 	if (ind != -1) {
 		accessPic = myPlantsData["Plants"][ind]["pic"];
 		accessSpecies = myPlantsData["Plants"][ind]["species"];
+		watering = myPlantsData["Plants"][ind]["watering"];
 	}
 
 	//calculating age
@@ -28,11 +30,51 @@ exports.view = function(req, res){
 	var ageDays = plantAge/(1000 * 3600 * 24);
 	ageDays = Math.floor(ageDays);
 
+	//formatting start
+	var start = new Date(myPlantsData["Plants"][ind]["start"]);
+	var monthS = start.getMonth() + 1;
+	if (monthS < 10) {
+		monthS = "0" + monthS;
+	}
+	var dayS = start.getDate();
+	if (dayS < 10) {
+		dayS = "0" + dayS;
+	}
+	var yearS = start.getFullYear();
+	start = yearS + "-" + monthS + "-" + dayS;
+
+	//formatting watering into ToD and How Often
+	var period;
+	var merid;
+	var minutes;
+	var hours;
+	if (watering != "") {
+		period = watering.substring(9);
+		hours = watering.substring(0, 2);
+		minutes = watering.substring(3, 5);
+		merid = watering.substring(6, 8);
+	}
+
+	if (merid == "AM") {
+		if (hours == 12) {
+			hours -= 12;
+		}
+	}
+	else {
+		hours += 12;
+	}
+	//!!! fix code ^ for value to default display 
+
+	var time = hours + ":" + minutes;
+
   res.render('froggy', {
   	"nickname": viewPlant,
   	"pic": accessPic,
   	"species": accessSpecies,
-  	"age": ageDays
+  	"age": ageDays,
+  	"start": start,
+  	"period": period,
+  	"time": time
   });
 };
 

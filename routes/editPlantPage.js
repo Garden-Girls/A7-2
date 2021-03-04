@@ -32,6 +32,10 @@ exports.addPlant = function(request, response) { 
 		timeHour = timeHour + timeRest + " AM";
 	}
 
+	if (timeHour.length < 8) {
+		timeHour = "0" + timeHour;
+	}
+
 	var watering = timeHour + " " + howOften;
 
 	var addedSpecies = request.params.species;
