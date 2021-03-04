@@ -54,13 +54,13 @@ exports.addEntry = function(req, res) { 
 		"slides": []
 	}
 
-	data.Froggy.push(newEntry);
-
 	var viewPlant = req.params.plantName;
 	var ind = -1;
 	var accessPic = "edit-photo-button.svg"; 
 	var accessSpecies = "placeholder species";
 	//this may be unneccesary if default image is added when updating json
+
+	data[viewPlant].push(newEntry);
 
 	for (var i = 0; i < myPlantsData["Plants"].length; i++) {
 		if (myPlantsData["Plants"][i]["nickname"] == viewPlant) {
