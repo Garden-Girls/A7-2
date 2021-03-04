@@ -46,12 +46,15 @@ exports.addEntry = function(req, res) { 
 	var year = inputDate.substring(0, 4);
 	var outputDate = month + "/" + day + "/" + year;
 
+	var picArr = [];
+	picArr.push(req.query.img);
+
 
 	newEntry = {
 		"date": outputDate,
 		"text": req.query.description,
 		"status": req.query.buttonGroup,
-		"slides": []
+		"slides": picArr
 	}
 
 	var viewPlant = req.params.plantName;
