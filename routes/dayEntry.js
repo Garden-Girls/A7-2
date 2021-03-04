@@ -25,15 +25,18 @@ exports.view = function(req, res) {
 
 	var forSlides = [];
 	var forText = "";
+	var forMood = "";
 
 	if (ind != -1) {
 		forSlides = data[plantToShow][ind].slides;
 		forText = data[plantToShow][ind].text;
+		forMood = data[plantToShow][ind].status;
 	}
 
 	res.render('dayEntry', {
 		"plant": plantToShow,
 		"date": dateToShow,
+		"status": forMood,
 		"slides": forSlides,
 		"text": forText
 	});
