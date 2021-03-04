@@ -95,7 +95,8 @@ app.get('/editPlantPage/:species', editPlantPage.view);
 //adding to JSON
 //app.get('/add', add.addEntry);
 app.get('/plant/:plantName/add', froggy.addEntry);
-app.get('/addingPlant', addingPlant.addPlant);
+//app.get('/addingPlant', addingPlant.addPlant);
+app.get('/editPlantPage/:species/add', editPlantPage.addPlant);
 //end testing
 
 http.createServer(app).listen(app.get('port'), function(){
