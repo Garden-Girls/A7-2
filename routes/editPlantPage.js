@@ -15,23 +15,36 @@ exports.addPlant = function(request, response) { 
 	var year = inputDate.substring(0, 4);
 	var outputDate = month + "/" + day + "/" + year;
 
-	var dateStart = new Date(outputDate);
-	var dateCurr = new Date();
-	var plantAge = dateCurr.getTime() - dateStart.getTime();
-	var ageDays = plantAge/(1000 * 3600 * 24);
+	var howOften = request.query.remindPer;
+	var timeDay = request.query.remindTime;
+	var timeHour = timeDay.substring(0,2);
+	var timeRest = timeDay.substring(2);
+	if (timeHour > 12) {
+		timeHour = timeHour - 12 + timeRest + " PM";
+	}
+	else if (timeHour == 12) {
+		timeHour = timeHour + timeRest + " PM";
+	}
+	else if (timeHour == 0) {
+		timeHour = 12 + timeRest + " AM";
+	}
+	else {
+		timeHour = timeHour + timeRest + " AM";
+	}
+
+	var watering = timeHour + " " + howOften;
+
+	var addedSpecies = request.params.species;
 
 	newPlant = {
 		"pic": "edit-photo-button.svg",
 		"nickname": request.query.name,
-		"species": "placeholder",
-		"age": ageDays,
-		"watering": "Once a week",
+		"species": addedSpecies,
+		"watering": watering,
 		"start": outputDate
 	}
 
 	data.Plants.push(newPlant);
-
-	var addedSpecies = request.params.species;
 
 	response.render('editPlantPage', {
   		"species": addedSpecies

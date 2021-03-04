@@ -4,32 +4,28 @@
 			"pic": "stripes.svg",
 			"nickname": "Stripes",
 			"species": "Philodendron",
-			"age": "1",
-			"watering": "Every day",
+			"watering": "7:00 AM every day",
 			"start": "01/01/2021"
 		},
 		{	
 			"pic": "froggy.svg",
 			"nickname": "Froggy",
 			"species": "Nephthytis",
-			"age": "1",
-			"watering": "Every other day",
+			"watering": "12:00 PM every other day",
 			"start": "01/02/2021"
 		},
 		{	
 			"pic": "emily.svg",
 			"nickname": "Emily",
 			"species": "Begonia",
-			"age": "1",
-			"watering": "Every week",
+			"watering": "5:00 PM every week",
 			"start": "01/03/2021"
 		},
 		{	
 			"pic": "bert.svg",
 			"nickname": "Bert",
 			"species": "Peperomia",
-			"age": "1",
-			"watering": "Every week",
+			"watering": "1:00 PM every week",
 			"start": "01/04/2021"
 		}
 	]
