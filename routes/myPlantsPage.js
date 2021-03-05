@@ -15,16 +15,11 @@ exports.view = function(req, res){
   		"pic": myPlantsData.pic,
   		"nickname": myPlantsData.nickname,
 		"species": myPlantsData.species,
-<<<<<<< HEAD
+
 		"age": myPlantsData.age,
 		"Plants": myPlantsData.Plants,
 		"autoAge": ageDays,
-		"watering": myPlantsData.watering,
-=======
-		"watering": myPlantsData.watering,
-		"Plants": myPlantsData.Plants,
-		"autoAge": ageDays,
->>>>>>> dbaddde9bc695fca210e1ae9067459bebde20fe5
+		"watering": myPlantsData.watering
   });
 };
 
