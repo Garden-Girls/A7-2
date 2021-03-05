@@ -45,18 +45,19 @@
           <input type="text" class="form-control" id="name" name="name" required></div>
         </div>
 
-        <label id='speices' for='name'>Species: {{species}}</label>
+        <label id='species' for='name'>Species: {{species}}</label>
+        <input id="species" type="text" name="species">
 
         <div id='start-date' class="form-group">
           <label for="date">Start Date:</label>
           <input type="date" class="form-control" id="date" name="date" max="2021-04-01" required>
         </div>
 
-        <div id="watering" class="form-group">
-        <h4>Watering Reminder</h4>
+        
+        <h4 id="one">Watering Reminder</h4>
         <div id="setTime" class="form-group">
           <label for="remindTime">Time of Day:</label>
-          <input type="time" class="form-control" id="remindTime" name="remindTime"></div>
+          <input type="time" class="form-control" id="remindTime" name="remindTime">
         </div>
 
         <div id = "how-often" class="form-group">

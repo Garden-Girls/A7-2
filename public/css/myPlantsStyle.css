@@ -36,7 +36,7 @@ a.fill-div {
 	position: absolute;
 	width: 211px;
 	height: 46px;
-	left: 82px;
+	left: 160px;
 	top: 16px;
 
 	font-family: Lora;
@@ -45,7 +45,8 @@ a.fill-div {
 	font-size: 30px;
 	line-height: 38px;
 	text-align: center;
-}
+	align-items: center;
+}	
 
 h2 {
 	font-size: 20px;
@@ -65,4 +66,26 @@ p {
 .navigation {
     width: 375px;
     height: 58px;
+}
+
+.header img {
+    margin-left: -45px;
+    margin-right: 40px;
+}
+
+#home-button{
+	position: absolute;
+	width:46px;
+	height: 37.82px;
+	top: 790px;
+	left: 40px;
+
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}
+
+#calendar-button{
+	position: absolute;
+	width:46px;
+	height: 37.82px;
+	top: 795px;
+	left: 200px;
 }
