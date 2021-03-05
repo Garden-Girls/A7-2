@@ -1,8 +1,10 @@
 var today = new Date().toISOString().split('T')[0];
 console.log(today);
-document.getElementsByName("date")[0].setAttribute('max', today);
+//document.getElementsByName("date")[0].setAttribute('max', today);
+$("#date")[0].setAttribute('max', today);
 
-document.getElementsByName("start-date")[0].setAttribute('max', today);
+//document.getElementsByName("sdate")[0].setAttribute('max', today);
+$("#sdate")[0].setAttribute('max', today);
 
 function getMood(){
 	var radioMoods = document.getElementsByName('buttonGroup');
