@@ -190,14 +190,14 @@ exports.update = function(request, response) { 
 	var watering = timeHour + " " + howOften;
 
 	//done calculating variables
-	var viewPlant = req.params.plantName;
+	var viewPlant = request.params.plantName;
 	var accessPic = "edit-photo-button.svg"; 
 	var accessSpecies = "placeholder species";
 
 	for (var i = 0; i < myPlantsData["Plants"].length; i++) {
 		if (myPlantsData["Plants"][i]["nickname"] == viewPlant) {
 			myPlantsData["Plants"][i].watering = watering;
-			myPlantsData["Plants"][i].start = start;
+			myPlantsData["Plants"][i].start = outputDate;
 
 			accessPic = myPlantsData["Plants"][i]["pic"];
 			accessSpecies = myPlantsData["Plants"][i]["species"];
@@ -205,7 +205,7 @@ exports.update = function(request, response) { 
 		}
 	}
 	//get vars for rendering
-	var startDate = new Date(start);
+	var startDate = new Date(outputDate);
 	var dateCurr = new Date(); //UTC timezone
 
 	var plantAge = dateCurr.getTime() - startDate.getTime();
@@ -217,6 +217,6 @@ exports.update = function(request, response) { 
 	  	"pic": accessPic,
 	  	"species": accessSpecies,
 	  	"age": ageDays,
-	  	"start": start,
+	  	"start": outputDate,
   	});
  }
