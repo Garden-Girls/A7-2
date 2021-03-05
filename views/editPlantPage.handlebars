@@ -21,14 +21,8 @@
     </div>
     
     <div class="back-button">
-      <a id='back-button' href='javascript:window.history.back()'>
+      <a id='back-button' href='/search'>
       <img src='/images/back-button.svg'>
-    </a>
-    </div>
-
-      <div class="close-button">
-      <a id='close-button' href='javascript:window.history.back()'>
-      <img src='/images/close-button.svg'>
     </a>
     </div>
 
@@ -56,14 +50,14 @@
         <h4 id="one">Watering Reminder</h4>
         <div id="setTime" class="form-group">
           <label for="remindTime">Time of Day:</label>
-          <input type="time" class="form-control" id="remindTime" name="remindTime">
+          <input type="time" class="form-control" id="remindTime" name="remindTime" required>
         </div>
 
         <div id = "how-often" class="form-group">
         <h4>How often:</h4>
         <div class="form-group">
           <label for="Every day">Every day</label>
-          <input type="radio" class="remindPer" id="every day" name="remindPer" value="every day">
+          <input type="radio" class="remindPer" id="every day" name="remindPer" value="every day" checked>
 
           <label for="Every other day">Every other day</label>
           <input type="radio" class="remindPer" id="every other day" name="remindPer" value="every other day">

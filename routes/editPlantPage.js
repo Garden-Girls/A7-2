@@ -41,7 +41,7 @@ exports.addPlant = function(request, response) { 
 	var addedSpecies = request.params.species;
 
 	newPlant = {
-		"pic": "edit-photo-button.svg",
+		"pic": "emily.svg",
 		"nickname": request.query.name,
 		"species": addedSpecies,
 		"watering": watering,
