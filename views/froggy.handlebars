@@ -82,29 +82,29 @@
     </div>
 
     <div class="input">
-      <form id="addEntryForm" role="form" method="get" action="/placeholder">
+      <form id="addEntryForm2" role="form" method="get" action="/plant/{{nickname}}/update">
       <h3>Plant Info</h3>
         <div class="form-group">
-          <label for="start-date">Start Date:</label>
-          <input type="date" class="form-control" id="start-date" name="start-date" max="2021-04-01" value="{{start}}">
+          <label for="sdate">Start Date:</label>
+          <input type="date" class="form-control" id="sdate" name="sdate" max="2021-04-01" value="{{start}}">
         </div>
 
         <h4>Watering Reminder</h4>
         <div class="form-group">
-          <label for="remind-time">Time of Day:</label>
-          <input type="time" class="form-control" id="remind-time" name="remind-time" value={{time}}>
+          <label for="time">Time of Day:</label>
+          <input type="time" class="form-control" id="time" name="time" value={{time}}>
         </div>
 
         <h4>How often:</h4>
         <div class="form-group">
-          <label for="Every day">Every day</label>
-          <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every day">
+          <label for="every day">Every day</label>
+          <input type="radio" class="remind" id="every day" name="remind" value="every day">
 
-          <label for="Every other day">Every other day</label>
-          <input type="radio" class="remind-per" id="Every day" name="remind-per" value="Every other day">
+          <label for="every other day">Every other day</label>
+          <input type="radio" class="remind" id="every day" name="remind" value="every other day">
 
-          <label for="Every week">Every week</label>
-          <input type="radio" class="remind-per" id="Every week" name="remind-per" value="Every week">
+          <label for="every week">Every week</label>
+          <input type="radio" class="remind" id="every week" name="remind" value="every week">
 
         </div>
 

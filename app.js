@@ -95,6 +95,7 @@ app.get('/editPlantPage/:species', editPlantPage.view);
 //adding to JSON
 //app.get('/add', add.addEntry);
 app.get('/plant/:plantName/add', froggy.addEntry);
+app.get('/plant/:plantName/update', froggy.update);
 //app.get('/addingPlant', addingPlant.addPlant);
 app.get('/editPlantPage/:species/add', editPlantPage.addPlant);
 app.get('/dayEntry/:plantName/:monthNum/:dayNum/:yearNum/add', dayEntry.addEntry);
