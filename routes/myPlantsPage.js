@@ -1,6 +1,7 @@
 /*
  * GET home page.
  */
+
 var myPlantsData = require("../myPlantsData.json")
 
 	var startDate = new Date(myPlantsData.startDate);
@@ -22,8 +23,5 @@ exports.view = function(req, res){
 		"watering": myPlantsData.watering
   });
 };
-
-
-
 
 
