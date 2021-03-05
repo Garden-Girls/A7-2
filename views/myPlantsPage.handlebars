@@ -37,7 +37,7 @@
                 <h2>{{nickname}}</h2>
                 <p>Species: {{species}}</p>
                 <p>Age: {{age}} {{autoAge}} days old</p>
-                <h5>** can't insert autoAge, something wrong w/ the render in js **</h5>
+                
                 <p>Watering: {{watering}}</p>
               </div>
 
@@ -47,19 +47,19 @@
     {{/Plants}}
 
 
-<div class='navigation'>
+<div class="footer">
+        <div class="footer-item">
+          <a id='home-button' href="/index">
+              <img src="/images/home-button.svg">
+          </a>
+        </div>
 
-  <img id='bottom-rectangle' src="images/bottom-rectangle.svg">
-
-  <a id='home-button' href='/index'>
-      <img src="images/home-button.svg">
-  </a>
-
-  <a href="/calendar">
-    <img id='calendar-button' src="images/calendar-button.svg">
-  </a>
-
-</div>
+        <div class="footer-item">
+          <a href="/calendar">
+          <img id='calendar-button' src="/images/calendar-button.svg">
+          </a>
+        </div>
+    </div>
 
 
   </div>

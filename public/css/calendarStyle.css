@@ -159,3 +159,19 @@ button {
 	left: 0px;
 	top: 609px;
 }
+
+
+img#bottom-rectangle {
+    top: 88px;
+}
+
+a#home-button {
+    top: 38px;
+}
+
+#calendar-button {
+    width: 46px;
+    height: 44px;
+    top: 40px;
+    left: 80px;
+}

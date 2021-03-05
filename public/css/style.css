@@ -89,6 +89,13 @@
 	left: 302px;
 	top: 83px;}
 
+	#close-button{
+	position: absolute;
+	width: 59px;
+	height: 34px;
+	left: 302px;
+	top: 83px;}
+
 #stripes{
 	position: absolute;
 	width: 89px;
