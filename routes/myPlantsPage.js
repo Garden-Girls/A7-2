@@ -16,9 +16,9 @@ exports.view = function(req, res){
   		"nickname": myPlantsData.nickname,
 		"species": myPlantsData.species,
 		"age": myPlantsData.age,
-		"watering": myPlantsData.watering,
 		"Plants": myPlantsData.Plants,
-		"autoAge": ageDays
+		"autoAge": ageDays,
+		"watering": myPlantsData.watering,
   });
 };
 
