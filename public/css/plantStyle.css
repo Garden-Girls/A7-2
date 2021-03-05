@@ -59,3 +59,6 @@ img#journalPhoto {
     margin-left: 145px;
 }
 
+.hide {
+	display:none;
+}
